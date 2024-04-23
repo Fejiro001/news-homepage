@@ -1,0 +1,63 @@
+@import url(reset.css);
+
+:root {
+  /* PRIMARY */
+  --soft-orange: hsl(35, 77%, 62%);
+  --soft-red: hsl(5, 85%, 63%);
+  /* NEUTRAL */
+  --off-white: hsl(36, 100%, 99%);
+  --gray-blue: hsl(233, 8%, 79%);
+  --dark-gray-blue: hsl(236, 13%, 42%);
+  --very-dark-blue: hsl(240, 100%, 5%);
+
+  --xx-large-font: clamp(); /*h1*/
+  --x-large-font: clamp(); /*h2*/
+  --large-font: clamp(); /*h3*/
+  --medium-font: clamp(); /*h4*/
+  --regular-font: clamp(); /*p*/
+
+  --gap: 1rem;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(../assets/fonts/static/Inter-Regular.ttf);
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../assets/fonts/static/Inter-Bold.ttf);
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../assets/fonts/static/Inter-ExtraBold.ttf);
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  padding-inline: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 2rem;
+}
+.nav-links {
+    display: none;
+}
+
+
+main {
+    display: grid;
+}
