@@ -10,15 +10,15 @@
   --dark-gray-blue: hsl(236, 13%, 42%);
   --very-dark-blue: hsl(240, 100%, 5%);
 
-  --xx-large-font: clamp(3em, 2vw, 5em); /*h1*/
+  --xx-large-font: clamp(2.7em, 2vw, 5em); /*h1*/
   --x-large-font: clamp(2em, 1.5vw, 4em); /*h2*/
-  --large-font: clamp(1.4em, 1vw, 3.5em); /*h3*/
+  --large-font: clamp(1.35em, 1vw, 3.5em); /*h3*/
   --medium-font: clamp(1.2em, 1vw, 3em); /*h4*/
   --regular-font: clamp(1em, 1vw, 2.5em); /*p*/
 
   --gap: 1em;
-  --mid-gap: 2em;
-  --large-gap: 3em;
+  --mid-gap: 1.9em;
+  --large-gap: 4.2em;
 }
 
 @font-face {
@@ -54,7 +54,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-block: 2rem;
+  padding-block: 1.8rem;
+}
+.logo {
+  width: 14%;
+  height: auto;
 }
 .nav-links {
   display: none;
@@ -67,13 +71,16 @@ main {
 
 .hero-section {
   display: grid;
-  gap: var(--gap);
+  gap: 1.1em;
 }
 .image-container {
   height: fit-content;
 }
 .hero-image {
   object-fit: cover;
+}
+.hero-heading {
+  padding-top: 0.6em;
 }
 .hero-heading h1 {
   color: var(--very-dark-blue);
@@ -90,36 +97,43 @@ main {
   color: var(--very-dark-blue);
   font-size: var(--regular-font);
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 .hero-button {
   background: var(--soft-red);
   color: var(--off-white);
+  font-weight: 700;
+  letter-spacing: 0.28em;
   border: none;
   text-transform: uppercase;
   padding: 1em 2em;
+  margin-top: 0.5em;
 }
 
 .aside-section {
   background: var(--very-dark-blue);
-  padding: 2em 1.2em;
-  display: grid;
-  gap: var(--mid-gap);
+  padding: 1.5em;
 }
 .aside-section h2 {
   color: var(--soft-orange);
   font-size: var(--x-large-font);
+  margin-bottom: 1.1em;
+}
+.article-container {
+  display: grid;
+  gap: var(--mid-gap);
 }
 .aside-article h3 {
-  padding-bottom: 1em;
+  padding-bottom: 0.5em;
   color: var(--off-white);
   font-size: var(--large-font);
 }
 .aside-article p {
   color: var(--gray-blue);
   font-size: var(--regular-font);
+  line-height: 1.7;
 }
 
 .news-section {
-    display: grid;
+  display: grid;
 }
