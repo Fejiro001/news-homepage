@@ -136,4 +136,30 @@ main {
 
 .news-section {
   display: grid;
+  gap: var(--mid-gap);
+}
+.news-section article {
+    display: flex;
+    gap: var(--mid-gap);
+}
+.news-image {flex: 1;}
+.news-text {flex: 2;}
+.news-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.news-text .news-index {
+  font-weight: 800;
+  font-size: var(--x-large-font);
+  color: var(--gray-blue);
+}
+.news-text h4 {
+  font-size: var(--medium-font);
+  font-weight: 800;
+  color: var(--very-dark-blue);
+}
+.news-text p {
+  font-size: var(--regular-font);
+  color: var(--dark-gray-blue);
 }
