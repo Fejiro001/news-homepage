@@ -10,7 +10,7 @@
   --dark-gray-blue: hsl(236, 13%, 42%);
   --very-dark-blue: hsl(240, 100%, 5%);
 
-  --xx-large-font: clamp(2.7em, 2vw, 5em); /*h1*/
+  --xx-large-font: clamp(2.7em, 4vw, 5em); /*h1*/
   --x-large-font: clamp(2em, 1.5vw, 4em); /*h2*/
   --large-font: clamp(1.35em, 1vw, 3.5em); /*h3*/
   --medium-font: clamp(1.2em, 1vw, 3em); /*h4*/
@@ -57,11 +57,38 @@ header {
   padding-block: 1.8rem;
 }
 .logo {
-  width: 14%;
+  /* width: 14%; */
   height: auto;
 }
 .nav-links {
   display: none;
+}
+@media (min-width: 1240px) and (orientation: landscape) {
+  body {
+    padding: 4rem 10rem 0 10rem;
+  }
+  .logo {
+    width: auto;
+  }
+  .menu-icon {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    gap: 2.7rem;
+  }
+  .nav-links li {
+    list-style: none;
+  }
+  .nav-links li a {
+    text-decoration: none;
+    color: var(--dark-gray-blue);
+    font-weight: 400;
+    font-size: var(--regular-font);
+  }
+  .nav-links li a:hover {
+    color: var(--soft-red);
+  }
 }
 
 main {
@@ -71,13 +98,14 @@ main {
 
 .hero-section {
   display: grid;
-  gap: 1.1em;
+  gap: 1.1rem;
 }
 .image-container {
   height: fit-content;
 }
 .hero-image {
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 .hero-heading {
   padding-top: 0.6em;
@@ -88,12 +116,12 @@ main {
   font-weight: 800;
   line-height: 1;
 }
-.hero-text {
+.hero-paragraph {
   display: grid;
   justify-items: start;
   gap: var(--gap);
 }
-.hero-text p {
+.hero-paragraph p {
   color: var(--very-dark-blue);
   font-size: var(--regular-font);
   font-weight: 400;
@@ -108,6 +136,36 @@ main {
   text-transform: uppercase;
   padding: 1em 2em;
   margin-top: 0.5em;
+}
+@media (min-width: 1240px) and (orientation: landscape) {
+  main {
+    gap: var(--large-gap) var(--mid-gap);
+    padding: 1.4rem 0.25rem;
+    grid-template-areas:
+      "hero hero hero aside"
+      "news news news news";
+  }
+  .hero-section {
+    height: fit-content;
+    grid-area: hero;
+    gap: var(--mid-gap);
+  }
+  .hero-text {
+    display: grid;
+    width: fit-content;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-paragraph {
+    padding-inline: .8rem;
+  }
+
+  .aside-section {
+    grid-area: aside;
+    min-width: 14rem;
+  }
+  .news-section {
+    grid-area: news;
+  }
 }
 
 .aside-section {
